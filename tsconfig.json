@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+    "module": "CommonJS",
+    "moduleResolution": "Node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strict": false,
+    "baseUrl": "./",
+    "outDir": "./dist",
+    "paths": {
+      "*": ["node_modules/*"]
+    },
+    "target": "ES2017",
+    "lib": ["ES2017", "WebWorker"],
+    "sourceMap": true,
+    "esModuleInterop": true
+  }
+}

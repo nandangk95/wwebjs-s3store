@@ -1,0 +1,30 @@
+{
+  "name": "wwebjs-s3store",
+  "version": "1.0.0",
+  "description": "An S3 store plugin for the whatsapp-web.js library",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "tsc && node ./dist/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nandangk95/wwebjs-s3store.git"
+  },
+  "keywords": [
+    "wwebjs",
+    "s3",
+    "s3store",
+    "whatsapp-web.js"
+  ],
+  "author": "Nandang Kurniawan",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/node": "^18.11.18"
+  },
+  "dependencies": {
+    "@aws-sdk/client-s3": "^3.256.0",
+    "whatsapp-web.js": "^1.19.2"
+  }
+}

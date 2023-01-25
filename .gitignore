@@ -1,0 +1,9 @@
+# build output typescript
+dist
+
+# output session
+tmp
+
+
+package-lock.json
+yarn.lock
