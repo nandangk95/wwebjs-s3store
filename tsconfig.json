@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    "declaration": true,
     "skipLibCheck": true,
     "module": "CommonJS",
     "moduleResolution": "Node",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "strict": false,
+    "strict": true,
     "baseUrl": "./",
     "outDir": "./dist",
     "paths": {
@@ -15,5 +16,9 @@
     "lib": ["ES2017", "WebWorker"],
     "sourceMap": true,
     "esModuleInterop": true
-  }
+  },
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }

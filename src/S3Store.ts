@@ -14,7 +14,7 @@ export class S3Store implements WAWebJS.Store {
         this.bucketName = bucketName;
     }
 
-    async sessionExists(options) {
+    async sessionExists(options: { session: any; }) {
         // console.log("sessionExists", options);
         try {
             let getObjectResult = await this.client.send(new GetObjectCommand({
@@ -29,7 +29,7 @@ export class S3Store implements WAWebJS.Store {
         }
     }
     
-    async save(options) {
+    async save(options: { session: any; }) {
         // console.log("save", options);
         try {
             const fileStream = fs.createReadStream(`${options.session}.zip`);
@@ -43,7 +43,7 @@ export class S3Store implements WAWebJS.Store {
         }
     }
 
-    async extract(options) {
+    async extract(options: { session: any; }) {
         // console.log("extract", options)
         try {
             let getObjectResult = await this.client.send(new GetObjectCommand({
@@ -55,7 +55,7 @@ export class S3Store implements WAWebJS.Store {
                 let stream = getObjectResult.Body as Readable
                 return new Promise<void>((resolve, reject) => {
                     stream.pipe(fs.createWriteStream(`${options.session}.zip`))
-                        .on('error', err => reject(err))
+                        .on('error', (err: any) => reject(err))
                         .on('close', () => resolve());
                 });
             }
@@ -64,7 +64,7 @@ export class S3Store implements WAWebJS.Store {
         }
     }
 
-    async delete(options) {
+    async delete(options: { session: any; }) {
         // console.log("delete", options)
         try {
             await this.client.send(new DeleteObjectCommand({
