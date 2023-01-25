@@ -26,5 +26,9 @@
   "dependencies": {
     "@aws-sdk/client-s3": "^3.256.0",
     "whatsapp-web.js": "^1.19.2"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/nandangk95/wwebjs-s3store/issues"
+  },
+  "homepage": "https://github.com/nandangk95/wwebjs-s3store#readme"
 }
