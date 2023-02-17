@@ -1,6 +1,6 @@
 {
   "name": "wwebjs-s3store",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "An S3 store plugin for the whatsapp-web.js library",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
